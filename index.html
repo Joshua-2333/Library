@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Library</title>
+  <style>
+    /* Add this style to make the video a background element */
+    #bgvideo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="bgvideo">
+    <source src="video/Library.mp4" type="video/mp4">
+  </video>
+  <div id="header">
+    <button id="new-book-button">New Book</button>
+    <input type="text" id="search-bar" placeholder="Search for books...">
+  </div>
+  <div id="book-container">
+    <!-- Your book library will be displayed here -->
+  </div>
+  <form id="new-book-form">
+    <label for="title">Title:</label>
+    <input type="text" id="title"><br><br>
+    <label for="author">Author:</label>
+    <input type="text" id="author"><br><br>
+    <label for="pages">Pages:</label>
+    <input type="number" id="pages"><br><br>
+    <label for="read">Read:</label>
+    <input type="checkbox" id="read"><br><br>
+    <input type="submit" value="Add Book">
+  </form>
+</body>
+</html>
